@@ -1,0 +1,133 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --black: hsl(0, 0%, 7%);
+  --gray: hsl(0, 0%, 42%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  min-width: 320px;
+  background-color: var(--yellow);
+  overflow: hidden;
+
+  main {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: clamp(327px, 30vw, 384px);
+  height: clamp(501px, 60vh, 522px);
+  margin-block: auto;
+  margin-inline: auto;
+  font-family: Roboto, system-ui, sans-serif;
+  font-weight: 700;
+  border: solid 1px var(--black);
+  border-radius: 20px;
+  padding: 24px;
+  background-color: var(--white);
+  box-shadow: 8px 8px 0 0 var(--black);
+  -webkit-user-select: none;
+  user-select: none;
+
+  .illustration {
+    display: flex;
+    justify-content: center;
+    width: clamp(279px, 30vw - 48px, 336px);
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      flex-grow: 1;
+    }
+  }
+  .details {
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .tag {
+      padding: 4px 12px;
+      background-color: var(--yellow);
+      width: fit-content;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: var(--black);
+    }
+    p > time {
+      color: var(--black);
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+    h1:hover {
+      color: var(--yellow);
+      cursor: pointer;
+    }
+    p {
+      color: var(--gray);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    p {
+      color: var(--black);
+      font-weight: 800;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.attribution {
+  font-family: monospace, "Courier New";
+  font-size: 11px;
+  font-weight: 700;
+  margin-inline: auto;
+  -webkit-user-select: none;
+  user-select: none;
+
+  a:first-child {
+    text-decoration: none;
+    color: rgb(2, 48, 255);
+  }
+
+  a:last-child {
+    text-decoration: none;
+    color: red;
+  }
+}
