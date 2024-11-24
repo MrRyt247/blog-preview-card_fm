@@ -10,6 +10,21 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Figtree-ExtraBold;
+  src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Figtree-SemiBold;
+  src: url(assets/fonts/static/Figtree-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Figtree;
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -32,7 +47,7 @@ body {
   height: clamp(501px, 60vh, 522px);
   margin-block: auto;
   margin-inline: auto;
-  font-family: Roboto, system-ui, sans-serif;
+  font-family: Figtree, system-ui, sans-serif;
   font-weight: 700;
   border: solid 1px var(--black);
   border-radius: 20px;
@@ -66,15 +81,17 @@ body {
       width: fit-content;
       border-radius: 4px;
       font-size: 1rem;
+      font-family: Figtree-SemiBold;
       color: var(--black);
     }
     p > time {
-      color: var(--black);
       font-weight: 500;
+      color: var(--black);
     }
     h1 {
+      font-family: Figtree-ExtraBold;
       font-size: 1.5rem;
-      font-weight: 800;
+      text-wrap: nowrap;
     }
     h1:hover {
       color: var(--yellow);
@@ -96,8 +113,8 @@ body {
       height: 32px;
     }
     p {
+      font-family: Figtree-ExtraBold;
       color: var(--black);
-      font-weight: 800;
     }
   }
 }
